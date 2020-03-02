@@ -4,7 +4,7 @@
 #
 Name     : jupyterlab_server
 Version  : 1.0.6
-Release  : 14
+Release  : 15
 URL      : https://files.pythonhosted.org/packages/05/ee/0f29b8a962a17a38f79ecac234973bccb32d215eb392f5fa5a51508e9dcc/jupyterlab_server-1.0.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/05/ee/0f29b8a962a17a38f79ecac234973bccb32d215eb392f5fa5a51508e9dcc/jupyterlab_server-1.0.6.tar.gz
 Summary  : Launch an application built using JupyterLab
@@ -25,9 +25,27 @@ BuildRequires : notebook
 
 %description
 # jupyterlab server
+
 https://github.com/jupyterlab/jupyterlab_server
+
 ## Install
+
 `pip install jupyterlab_server`
+
+## Usage
+The application author creates a JupyterLab build on their machine
+using the core JupyterLab application.  They can then serve their
+files by subclassing the `LabServerApp` with the appropriate
+configuration and creating a Python entry point that launches the app.
+
+
+## Development Install
+
+```
+git clone https://github.com/jupyterlab/jupyterlab_server.git
+cd jupyterlab_server
+pip install -e .
+```
 
 %package license
 Summary: license components for the jupyterlab_server package.
@@ -50,6 +68,7 @@ python components for the jupyterlab_server package.
 Summary: python3 components for the jupyterlab_server package.
 Group: Default
 Requires: python3-core
+Provides: pypi(jupyterlab-server)
 
 %description python3
 python3 components for the jupyterlab_server package.
@@ -57,13 +76,14 @@ python3 components for the jupyterlab_server package.
 
 %prep
 %setup -q -n jupyterlab_server-1.0.6
+cd %{_builddir}/jupyterlab_server-1.0.6
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1567897632
+export SOURCE_DATE_EPOCH=1583163361
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -80,7 +100,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/jupyterlab_server
-cp LICENSE %{buildroot}/usr/share/package-licenses/jupyterlab_server/LICENSE
+cp %{_builddir}/jupyterlab_server-1.0.6/LICENSE %{buildroot}/usr/share/package-licenses/jupyterlab_server/8cd4cef90d28bff5235d6343a8158b70a0668dc4
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -91,7 +111,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/jupyterlab_server/LICENSE
+/usr/share/package-licenses/jupyterlab_server/8cd4cef90d28bff5235d6343a8158b70a0668dc4
 
 %files python
 %defattr(-,root,root,-)
