@@ -4,7 +4,7 @@
 #
 Name     : jupyterlab_server
 Version  : 1.0.7
-Release  : 16
+Release  : 17
 URL      : https://files.pythonhosted.org/packages/74/e9/9b148991925148b7b27fa4b88be4ac778229db32b682a2ef273f42a8746b/jupyterlab_server-1.0.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/74/e9/9b148991925148b7b27fa4b88be4ac778229db32b682a2ef273f42a8746b/jupyterlab_server-1.0.7.tar.gz
 Summary  : Launch an application built using JupyterLab
@@ -25,27 +25,9 @@ BuildRequires : notebook
 
 %description
 # jupyterlab server
-
 https://github.com/jupyterlab/jupyterlab_server
-
 ## Install
-
 `pip install jupyterlab_server`
-
-## Usage
-The application author creates a JupyterLab build on their machine
-using the core JupyterLab application.  They can then serve their
-files by subclassing the `LabServerApp` with the appropriate
-configuration and creating a Python entry point that launches the app.
-
-
-## Development Install
-
-```
-git clone https://github.com/jupyterlab/jupyterlab_server.git
-cd jupyterlab_server
-pip install -e .
-```
 
 %package license
 Summary: license components for the jupyterlab_server package.
@@ -68,13 +50,11 @@ python components for the jupyterlab_server package.
 Summary: python3 components for the jupyterlab_server package.
 Group: Default
 Requires: python3-core
-Provides: pypi(jupyterlab-server)
-Requires: pypi(notebook)
-Requires: pypi(pytest)
-Requires: pypi(requests)
+Provides: pypi(jupyterlab_server)
 Requires: pypi(jinja2)
 Requires: pypi(json5)
 Requires: pypi(jsonschema)
+Requires: pypi(notebook)
 
 %description python3
 python3 components for the jupyterlab_server package.
@@ -89,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583293042
+export SOURCE_DATE_EPOCH=1583508688
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
