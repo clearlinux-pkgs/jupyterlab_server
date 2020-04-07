@@ -4,7 +4,7 @@
 #
 Name     : jupyterlab_server
 Version  : 1.1.0
-Release  : 18
+Release  : 19
 URL      : https://files.pythonhosted.org/packages/aa/e7/0cdbd6ac5c0efc2eb807a372d7461abd75e8d690328655b8b2339358fc13/jupyterlab_server-1.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/aa/e7/0cdbd6ac5c0efc2eb807a372d7461abd75e8d690328655b8b2339358fc13/jupyterlab_server-1.1.0.tar.gz
 Summary  : Launch an application built using JupyterLab
