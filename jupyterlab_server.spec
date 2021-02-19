@@ -4,7 +4,7 @@
 #
 Name     : jupyterlab_server
 Version  : 2.2.1
-Release  : 37
+Release  : 38
 URL      : https://files.pythonhosted.org/packages/91/3b/a43e9c9c8ba05e4b82253e99ae4afdeffaf3921f0ac662bf663c14aa50d3/jupyterlab_server-2.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/91/3b/a43e9c9c8ba05e4b82253e99ae4afdeffaf3921f0ac662bf663c14aa50d3/jupyterlab_server-2.2.1.tar.gz
 Summary  : JupyterLab Server
