@@ -4,7 +4,7 @@
 #
 Name     : jupyterlab_server
 Version  : 2.5.0
-Release  : 42
+Release  : 43
 URL      : https://files.pythonhosted.org/packages/2e/fa/b25fbec19d55998886087ceeef60785a1cdeccf999e5d3d431e585d42a1b/jupyterlab_server-2.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2e/fa/b25fbec19d55998886087ceeef60785a1cdeccf999e5d3d431e585d42a1b/jupyterlab_server-2.5.0.tar.gz
 Summary  : A set of server components for JupyterLab and JupyterLab like applications .
