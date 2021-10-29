@@ -4,7 +4,7 @@
 #
 Name     : jupyterlab_server
 Version  : 2.8.2
-Release  : 58
+Release  : 59
 URL      : https://files.pythonhosted.org/packages/79/41/552120becdd267b505f6aafc522c0d90bb051d780cd1b1e7429286b01418/jupyterlab_server-2.8.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/79/41/552120becdd267b505f6aafc522c0d90bb051d780cd1b1e7429286b01418/jupyterlab_server-2.8.2.tar.gz
 Summary  : A set of server components for JupyterLab and JupyterLab like applications .
@@ -22,6 +22,7 @@ Requires: packaging
 Requires: requests
 BuildRequires : Babel
 BuildRequires : Jinja2
+BuildRequires : anyio
 BuildRequires : buildreq-distutils3
 BuildRequires : entrypoints
 BuildRequires : json5
@@ -80,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1632753508
+export SOURCE_DATE_EPOCH=1635527552
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
