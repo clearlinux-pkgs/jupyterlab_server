@@ -1,8 +1,0 @@
-2.9.0
-pypi(babel)
-pypi(entrypoints)
-pypi(jinja2)
-pypi(json5)
-pypi(jsonschema)
-pypi(packaging)
-pypi(requests)
